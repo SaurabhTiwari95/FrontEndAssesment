@@ -19,7 +19,6 @@ export class NewsHomeComponent implements OnInit {
       for(let i = 0;i < 20; i++){
         this.service.getNewsById(this.service.newsIds[i]).toPromise().then((response)=>{
           this.newsItem.push(response);
-          console.log(response);
         })
       }
     })

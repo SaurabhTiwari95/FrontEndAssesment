@@ -17,7 +17,6 @@ export class GlobalService {
       this.http.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty').toPromise().then(
         (response : any)=>{
           this.newsIds = response;
-          console.log("global=>"+response);
           resolve();
         }
       )
